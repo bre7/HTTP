@@ -73,6 +73,7 @@ public enum Status: Equatable {
     case PreconditionRequired
     case TooManyRequests
     case RequestHeaderFieldsTooLarge
+    case UnavailableLegalReasons
     // MARK: Server Error
     case InternalServerError
     case NotImplemented
@@ -139,6 +140,7 @@ public enum Status: Equatable {
         case PreconditionRequired.statusCode:          self = PreconditionRequired
         case TooManyRequests.statusCode:               self = TooManyRequests
         case RequestHeaderFieldsTooLarge.statusCode:   self = RequestHeaderFieldsTooLarge
+        case UnavailableLegalReasons.statusCode:       self = UnavailableLegalReasons
 
         case InternalServerError.statusCode:           self = InternalServerError
         case NotImplemented.statusCode:                self = NotImplemented
@@ -208,6 +210,7 @@ public enum Status: Equatable {
         case .PreconditionRequired:          return 428
         case .TooManyRequests:               return 429
         case .RequestHeaderFieldsTooLarge:   return 431
+        case .UnavailableLegalReasons:       return 451
 
         case .InternalServerError:           return 500
         case .NotImplemented:                return 501
@@ -276,6 +279,7 @@ public enum Status: Equatable {
         case .PreconditionRequired:          return "PreconditionR equired"
         case .TooManyRequests:               return "Too Many Requests"
         case .RequestHeaderFieldsTooLarge:   return "Request Header Fields Too Large"
+        case .UnavailableLegalReasons:       return ""Unavailable For Legal Reasons
 
         case .InternalServerError:           return "Internal Server Error"
         case .NotImplemented:                return "Not Implemented"
